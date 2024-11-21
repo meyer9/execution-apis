@@ -56,3 +56,36 @@ StorageProof:
       type: array
       items:
         $ref: '#/components/schemas/bytes'
+BlockExecutionParams:
+  title: Block execution parameters
+  description: Block execution parameters needed to execute one block
+  type: object
+  required:
+    - timestamp
+    - random
+    - suggestedFeeRecipient
+    - parentBeaconBlockRoot
+    - transactions
+    - gasLimit
+    - parentHash
+  properties:
+    timestamp:
+      title: Timestamp
+      $ref: '#/components/schemas/uint64'
+    random:
+      title: Random
+      $ref: '#/components/schemas/hash32'
+    suggestedFeeRecipient:
+      title: Suggested fee recipient
+      $ref: '#/components/schemas/address'
+    parentBeaconBlockRoot:
+      title: Parent beacon block root
+      $ref: '#/components/schemas/hash32'
+    transactions:
+      title: Transactions
+      type: array
+      items:
+        $ref: '#/components/schemas/bytes'
+    gasLimit:
+      title: Gas limit
+      $ref: '#/components/schemas/uint64'
