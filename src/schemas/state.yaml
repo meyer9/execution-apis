@@ -89,3 +89,6 @@ BlockExecutionParams:
     gasLimit:
       title: Gas limit
       $ref: '#/components/schemas/uint64'
+    parentHash:
+      title: Parent block hash
+      $ref: '#/components/schemas/hash32'
