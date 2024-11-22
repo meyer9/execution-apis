@@ -191,3 +191,22 @@
           items:
             $ref: '#/components/schemas/bytes'
   examples: []
+- name: debug_executionWitness
+  summary: Returns state preimages for a given block number.
+  params:
+    - name: Block
+      required: true
+      schema:
+        $ref: '#/components/schemas/BlockNumberOrTag'
+  result:
+    name: Execution result
+    schema:
+      title: Execution result
+      type: object
+      properties:
+        stateTriePreimages:
+          title: State trie preimages
+          type: array
+          items:
+            $ref: '#/components/schemas/bytes'
+  examples: []
